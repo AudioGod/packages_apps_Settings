@@ -23,5 +23,8 @@
     <!-- About phone screen, build date of SSHD FIRMWARE -->  
     <string name="build_date">Build date</string>  
     <string name="build_date_default">Unknown</string>
-
+	
+	<!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+	
 </resources>
