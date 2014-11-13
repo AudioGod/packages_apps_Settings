@@ -17,6 +17,7 @@
 package com.android.settings;
 
 import com.android.settings.applications.AppOpsSummary;
+import com.android.settings.blacklist.BlacklistSettings;
 
 /**
  * Top-level Settings activity
@@ -121,4 +122,5 @@ public class Settings extends SettingsActivity {
 	public static class SSHDTunerActivity extends SettingsActivity { /* empty */ }
 	public static class About extends SettingsActivity { /* empty */ }
     public static class ExpandedDesktopSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class BlacklistSettingsActivity extends SettingsActivity { /* empty */ }
 }
