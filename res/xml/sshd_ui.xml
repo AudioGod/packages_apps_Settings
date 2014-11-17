@@ -35,7 +35,13 @@
         <PreferenceScreen
      	        android:key="gesture_anywhere"
                 android:fragment="com.android.settings.gestureanywhere.GestureAnywhereSettings"
-                android:title="@string/gesture_anywhere_title" />	
+                android:title="@string/gesture_anywhere_title" />
+
+		<!-- Expanded Desktop -->		
+        <PreferenceScreen
+                android:key="expanded_desktop"
+                android:title="@string/power_menu_expanded_desktop"
+                android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />	
 		   
 	</PreferenceCategory>	   
 
