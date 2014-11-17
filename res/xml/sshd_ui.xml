@@ -20,9 +20,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/sshd_ui_title" >
 	
-	<Preference
-        android:key="nothing"
-        android:title="@string/nothing_title"
-        android:enabled="false" />
+	<!-- Expanded desktop -->
+	<PreferenceScreen
+		android:key="expanded_desktop"
+		android:title="@string/power_menu_expanded_desktop"
+		android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
 
 </PreferenceScreen>
