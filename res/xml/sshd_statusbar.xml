@@ -34,6 +34,13 @@
         android:summary="@string/double_tap_to_sleep_summary"
         android:defaultValue="true" />	
 	
+	<!-- Clock & Date  -->
+	<PreferenceScreen
+        android:key="clock_styles"
+        android:title="@string/clock_styles_title"
+        android:summary="@string/clock_styles_summary"
+        android:fragment="com.android.settings.sshdtuner.statusbar.ClockStyles" />
+	
 	<!-- Network traffic -->
     <PreferenceScreen
         android:key="network_traffic"
