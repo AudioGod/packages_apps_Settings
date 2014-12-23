@@ -20,9 +20,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/sshd_statusbar_title" >
 	
-	<Preference
-        android:key="nothing"
-        android:title="@string/nothing_title"
-        android:enabled="false" />
+	<!-- Network traffic -->
+    <PreferenceScreen
+        android:key="network_traffic"
+        android:fragment="com.android.settings.sshdtuner.statusbar.Traffic"
+        android:title="@string/network_traffic_title" />
 
 </PreferenceScreen>
