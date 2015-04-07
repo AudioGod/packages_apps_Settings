@@ -1911,7 +1911,10 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.wfd.WifiDisplaySettings" />
         </activity>
-
+	
+	<!-- Gesture Anywhere -->
+        <activity android:name=".gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".gestureanywhere.GestureAnywhereCreateGestureActivity" />   
 
         <!-- Development settings -->
 
