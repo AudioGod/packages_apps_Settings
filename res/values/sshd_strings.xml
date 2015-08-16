@@ -70,6 +70,7 @@
 	<string name="notification_drawer_title">Notification Drawer</string>
     <string name="status_clock_date_title">Clock-Date-Battery</string>
 	<string name="sshd_tuner_options_title">SSHD Tuner Options</string>
+	<string name="sshd_interface_title">Sungsonic Interface</string>
 	
 	<!-- General strings -->
     <string name="ok">OK</string>
