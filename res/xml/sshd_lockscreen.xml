@@ -73,4 +73,16 @@
             android:persistent="false"/>
 
     </PreferenceCategory>
+	
+	<PreferenceCategory
+        android:key="lockscreen_color"
+        android:title="@string/lockscreen_colors" >
+
+        <PreferenceScreen
+            android:key="lockscreen_colors"
+            android:title="@string/lockscreen_colors"
+            android:fragment="com.android.settings.sshdtuner.lockscreen.LockColorsCategory" />
+
+    </PreferenceCategory>
+	
 </PreferenceScreen>
