@@ -60,6 +60,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Index;
 import com.android.settings.search.Indexable;
 import com.android.settings.search.SearchIndexableRaw;
+import com.android.settings.sshd.SeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,6 +105,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_TRUST_AGENT = "trust_agent";
     private static final String KEY_SCREEN_PINNING = "screen_pinning_settings";
     private static final String KEY_REPLACE_ENCRYPTION_PASSWORD = "crypt_keeper_replace_password";
+    private static final String KEY_BLUR_RADIUS = "lockscreen_blur_radius";
 
     // These switch preferences need special handling since they're not all stored in Settings.
     private static final String SWITCH_PREFERENCE_KEYS[] = { KEY_LOCK_AFTER_TIMEOUT,
@@ -132,6 +134,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private SwitchPreference mToggleAppInstallation;
     private DialogInterface mWarnInstallApps;
     private SwitchPreference mPowerButtonInstantlyLocks;
+    private SeekBarPreference mBlurRadius;
 
     private boolean mIsPrimary;
 
@@ -336,6 +339,16 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 manageAgents.setEnabled(false);
                 manageAgents.setSummary(R.string.disabled_because_no_backup_security);
             }
+        }
+
+        // Blur
+        mBlurRadius =
+                (SeekBarPreference) findPreference(KEY_BLUR_RADIUS);
+        if (mBlurRadius != null) {
+            int blurRadius = Settings.System.getInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_BLUR_RADIUS, 14);
+            mBlurRadius.setValue(blurRadius);
+            mBlurRadius.setOnPreferenceChangeListener(this);
         }
 
         // The above preferences come and go based on security state, so we need to update
@@ -714,6 +727,10 @@ public class SecuritySettings extends SettingsPreferenceFragment
             } else {
                 setNonMarketAppsAllowed(false);
             }
+        } else if (KEY_BLUR_RADIUS.equals(key)) {
+            int bluRadius = (Integer) value;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_BLUR_RADIUS, bluRadius);
         }
         return result;
     }

@@ -648,5 +648,10 @@
     <string name="select_custom_app_title">Select custom app</string>
     <string name="select_custom_activity_title">Select custom activity</string>
     <string name="profile_applist_title">Applications</string>
+	
+	<!-- Lockscreen blur/see through -->
+    <string name="lockscreen_see_through_title">Blur</string>
+    <string name="lockscreen_see_through_summary">Blurs and displays the content behind your lockscreen</string>
+    <string name="lockscreen_blur_radius">Blur effect intensity</string>
 
 </resources>
