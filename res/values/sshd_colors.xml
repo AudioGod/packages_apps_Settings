@@ -19,7 +19,6 @@
 	
 	<!-- SSHD Tuner -->
 	<color name="background_tab_pressed">#6633B5E5</color>
-	<color name="theme_accent">#ff009688</color>
 	<color name="text_color_white">@android:color/white</color>
 	<color name="black">@android:color/black</color>
     <color name="white">@android:color/white</color>
