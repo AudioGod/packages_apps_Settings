@@ -75,7 +75,7 @@
 	    <!-- Power Menu -->
 	    <PreferenceScreen
             android:key="powermenu"
-            android:fragment="com.android.settings.sshdtuner.powermenu.Powermenu"
+            android:fragment="com.android.settings.sshdtuner.powermenu.PowerMenuActions"
             android:title="@string/sshd_powermenu_title"
 		    android:enabled="true" />
 	  
