@@ -78,6 +78,13 @@
             android:fragment="com.android.settings.sshdtuner.powermenu.Powermenu"
             android:title="@string/sshd_powermenu_title"
 		    android:enabled="true" />
+			
+		<!-- Volume -->
+	    <PreferenceScreen
+            android:key="volume"
+            android:fragment="com.android.settings.sshdtuner.volume.Volume"
+            android:title="@string/sshd_volume_title"
+            android:enabled="true" />	
 	  
   </PreferenceCategory>
 </PreferenceScreen>

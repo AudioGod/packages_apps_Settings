@@ -38,6 +38,7 @@
 	<string name="sshd_notifications_title">Notifications</string>
 	<string name="sshd_lockscreen_title">Lock Screen</string>
 	<string name="sshd_recents_title">Recents</string>
+	<string name="sshd_volume_title">Volume Buttons</string>
 	<string name="sshd_powermenu_title">Power Menu</string>
 	<string name="sshd_tunermain_title">SSHD Tuner</string>
 	<!-- SSHD Tuner Ends -->
@@ -71,6 +72,7 @@
     <string name="status_clock_date_title">Clock-Date-Battery</string>
 	<string name="sshd_tuner_options_title">SSHD Tuner Options</string>
 	<string name="sshd_interface_title">Sungsonic Interface</string>
+	<string name="sshd_volume_cat">Volume Buttons</string>
 	
 	<!-- General strings -->
     <string name="ok">OK</string>
