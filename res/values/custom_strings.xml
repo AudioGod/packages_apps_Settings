@@ -828,6 +828,9 @@
     <string name="interruptions_ignore_while_media_title">Prevent audio ducking</string>
     <string name="interruptions_ignore_while_media_summary">Do not reduce media playback volume when a notification arrives</string>
 
+    <!-- Google -->
+    <string name="google_title">Google</string>
+
      <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
