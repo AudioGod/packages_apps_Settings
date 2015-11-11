@@ -126,5 +126,9 @@
     <string name="profile_reset_title">Reset</string>
     <string name="add">Add</string>
     <string name="choose_app">Choose app</string>
+	<string name="profile_applist_title">Apps</string>
+    <string name="picker_activities">Activities</string>
+    <string name="select_custom_app_title">Select custom app</string>
+    <string name="select_custom_activity_title">Select custom activity</string>
 
 </resources>
