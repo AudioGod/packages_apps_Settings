@@ -72,6 +72,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
     private static final String KEY_BUILD_NUMBER = "build_number";
+	private static final String KEY_SSHD_VERSION = "sshd_version";  
+	private static final String KEY_SSHD_BUILD_DATE = "build_date";  
     private static final String KEY_DEVICE_MODEL = "device_model";
     private static final String KEY_SELINUX_STATUS = "selinux_status";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
@@ -128,6 +130,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL);
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
+		setValueSummary(KEY_SSHD_VERSION, "ro.sshd.version");
+		setValueSummary(KEY_SSHD_BUILD_DATE, "ro.build.date");  
+
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
 
         if (!SELinux.isSELinuxEnabled()) {
