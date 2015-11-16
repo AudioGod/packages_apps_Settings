@@ -99,12 +99,9 @@
     <string name="ripple_title">Ripple effect</string>
     <string name="colorize_ripple_title">Colorize ripple effect</string>
     <string name="colorize_ripple_dialog_title">Choose how to colorize the ripple effect</string>
-<<<<<<< HEAD
 	<string name="settings_reset_button">Reset</string>
-=======
 	<string name="reset_paranoid">Paranoid</string>
     <string name="reset_android">Android</string>
->>>>>>> ad1f316... PIE 3.0 (2/2)
 	
 	<!-- Hardware Keys -->
     <string name="button_pref_title">Buttons</string>
@@ -578,5 +575,8 @@
     <string name="recents_searchbar_summary">Show Google search bar in the recents screen</string>
     <string name="recents_show_membar_title">Memory bar</string>
     <string name="recents_show_membar_summary">Show a bar with the device\'s available memory</string>
-    
+
+	<string name="recents_clear_all_dismiss_all_title">Clear all tasks</string>
+    <string name="recents_clear_all_dismiss_all_summary">Include foreground task when clearing all</string>
+	
 </resources>
