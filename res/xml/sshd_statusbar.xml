@@ -53,5 +53,11 @@
         android:key="network_traffic"
         android:fragment="com.android.settings.sshdtuner.statusbar.Traffic"
         android:title="@string/network_traffic_title" />
+		
+	<!-- Carrier label -->
+	<PreferenceScreen
+        android:key="carrier_label"
+		android:fragment="com.android.settings.sshdtuner.statusbar.CarrierLabel"
+        android:title="@string/carrier_options" />	
 
 </PreferenceScreen>
