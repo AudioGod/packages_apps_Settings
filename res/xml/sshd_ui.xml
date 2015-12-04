@@ -42,6 +42,12 @@
      	        android:key="gesture_anywhere"
                 android:fragment="com.android.settings.gestureanywhere.GestureAnywhereSettings"
                 android:title="@string/gesture_anywhere_title" />
+				
+		<!-- App circle sidebar -->
+		<PreferenceScreen
+                android:key="app_circle_bar"
+                android:fragment="com.android.settings.benzo.AppCircleBar"
+                android:title="@string/app_circle_bar_title" />		
 
 		<!-- Expanded Desktop -->
         <PreferenceScreen
