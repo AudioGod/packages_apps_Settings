@@ -56,6 +56,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_MENU_LONG_PRESS = "hardware_keys_menu_long_press";
 	private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
 	private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+	private static final String KEY_VOLUME_CONTROL_RING_STREAM = "volume_keys_control_ring_stream";
 
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_HOME = "home_key";
@@ -96,6 +97,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 	private ListPreference mVolumeKeyCursorControl;
 	
 	private SwitchPreference mVolumeRockerWake;
+	private SwitchPreference mVolumeControlRingStream;
 
     private PreferenceCategory mNavigationPreferencesCat;
 
@@ -191,6 +193,14 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         int volumeRockerWake = Settings.System.getInt(getContentResolver(),
                 VOLUME_ROCKER_WAKE, 0);
         mVolumeRockerWake.setChecked(volumeRockerWake != 0);
+
+		mVolumeControlRingStream = (SwitchPreference)
+                findPreference(KEY_VOLUME_CONTROL_RING_STREAM);
+        int volumeControlRingtone = Settings.System.getInt(getContentResolver(),
+                Settings.System.VOLUME_KEYS_CONTROL_RING_STREAM, 1);
+        if (mVolumeControlRingStream != null) {
+            mVolumeControlRingStream.setChecked(volumeControlRingtone > 0);
+        }
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -243,5 +253,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
         return false;
     }
+	
+	@Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mVolumeControlRingStream) {
+            int value = mVolumeControlRingStream.isChecked() ? 1 : 0;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.VOLUME_KEYS_CONTROL_RING_STREAM, newValue);
+        }
 
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
 }
