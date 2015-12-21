@@ -73,6 +73,8 @@
 	<string name="sshd_tuner_options_title">SSHD Tuner Options</string>
 	<string name="sshd_interface_title">Sungsonic Interface</string>
 	<string name="sshd_volume_cat">Volume Buttons</string>
+	<string name="sshd_powermenu_cat">PowerMenu Customization</string>
+	<string name="sshd_statusbar_cat">StatusBar Customizations</string>
 	
 	<!-- General strings -->
     <string name="ok">OK</string>
