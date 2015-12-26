@@ -20,9 +20,16 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/sshd_lockscreen_title" >
 	
-	<Preference
-        android:key="nothing"
-        android:title="@string/nothing_title"
-        android:enabled="false" />
-
+	<PreferenceCategory
+        android:key="lockscreen_weather"
+        android:title="@string/weather_category">
+	
+	    <!-- Clock & Date  -->
+	    <PreferenceScreen
+            android:key="ls_weather"
+            android:title="@string/weather_category"
+            android:summary="@string/lockscreen_summary"
+            android:fragment="com.android.settings.sshdtuner.lockscreen.WeatherCategory" />
+			
+    </PreferenceCategory>
 </PreferenceScreen>
