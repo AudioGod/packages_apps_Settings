@@ -24,7 +24,7 @@
         android:key="recents_panel"
         android:title="@string/recents_panel_category" >
 
-        <com.android.settings.preference.SystemSettingSwitchPreference
+        <com.android.settings.sshd.SystemSettingSwitchPreference
             android:key="recents_search_bar"
             android:title="@string/recents_searchbar_title"
             android:defaultValue="true" />
