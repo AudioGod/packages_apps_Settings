@@ -37,11 +37,17 @@
                 android:fragment="com.android.settings.gestureanywhere.GestureAnywhereSettings"
                 android:title="@string/gesture_anywhere_title" />
 
-		<!-- Expanded Desktop -->		
+		<!-- Expanded Desktop -->
         <PreferenceScreen
                 android:key="expanded_desktop"
                 android:title="@string/power_menu_expanded_desktop"
-                android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />	
+                android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+
+		<!-- Animations-->
+        <PreferenceScreen
+                android:key="animation_settings"
+                android:title="@string/animation_title"
+                android:fragment="com.android.settings.sshdtuner.ui.AnimationSettings" />				
 		   
 	</PreferenceCategory>	   
 
