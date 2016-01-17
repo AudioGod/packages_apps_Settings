@@ -33,6 +33,11 @@
             android:entryValues="@array/systemui_navbar_mode_values"
             android:key="navbar_mode"
             android:title="@string/navbar_mode" />
+			
+		<PreferenceScreen
+            android:key="smartbar_settings"
+            android:title="@string/smartbar_settings_title"
+            android:fragment="com.dirtyunicorns.dutweaks.fragments.SmartbarSettings" />	
 
         <PreferenceScreen
             android:key="fling_settings"
@@ -42,7 +47,7 @@
     </PreferenceCategory>
 		
 		
-		<PreferenceCategory
+	<PreferenceCategory
         android:key="category_navbar_general"
         android:title="@string/navbar_general_title" >
 
