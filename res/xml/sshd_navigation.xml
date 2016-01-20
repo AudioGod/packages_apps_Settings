@@ -20,9 +20,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/sshd_navigation_title" >
 	
-	<Preference
-        android:key="nothing"
-        android:title="@string/nothing_title"
-        android:enabled="false" />
+	<com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="kill_app_longpress_back"
+            android:title="@string/kill_app_longpress_back"
+            android:summary="@string/kill_app_longpress_back_summary"
+            android:defaultValue="false"/>
 
 </PreferenceScreen>
