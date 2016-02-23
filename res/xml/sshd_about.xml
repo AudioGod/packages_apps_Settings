@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2016 The Sungsonic Co
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sshd="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/sshd_about_title" >
+	
+  <PreferenceCategory
+        android:key="about"
+        android:title="@string/about_sshd">
+		
+		<!--About SSHD Logo -->
+	 <PreferenceScreen
+	       android:key="about_sshd"
+           android:enabled="true"
+           android:layout="@layout/about_sshd_logo" />	
+
+  </PreferenceCategory>
+	
+	
+  <PreferenceCategory
+        android:key="links"
+        android:title="@string/sshd_links">
+		
+	    <!-- official Website -->
+        <Preference
+            android:key="sshd_web"
+			android:icon="@drawable/web"
+            android:title="@string/sshd_official_web" />
+	  
+        <!-- official Downloads -->
+        <Preference
+            android:key="sshd_down"
+			android:icon="@drawable/downloads"		
+            android:title="@string/sshd_official_downloads" />
+	  
+	   <!-- changelog -->
+        <Preference
+            android:key="sshd_changelog"
+		    android:icon="@drawable/changelog"
+            android:title="@string/sshd_official_changelog" />
+	  
+	    <!-- github -->
+        <Preference
+            android:key="sshd_github"
+			android:icon="@drawable/github"
+            android:title="@string/sshd_official_github" />
+	  
+	    <!-- Donate-->
+        <Preference
+            android:key="sshd_donate"
+			android:icon="@drawable/donate"
+            android:title="@string/sshd_official_donate" />
+	  
+	  
+	  <!-- Gplus -->
+        <Preference
+            android:key="sshd_gplus"
+			android:icon="@drawable/gplus"
+            android:title="@string/sshd_official_gplus" />
+	  
+   </PreferenceCategory>
+	
+   <PreferenceCategory
+         android:key="devs"
+         android:title="@string/dev">
+    
+        <com.android.settings.widgets.DeveloperPreference
+            android:title="AudioGod"
+            sshd:nameDev="AudioGod"
+            sshd:twitterHandle="audiogod"
+            sshd:donateLink="@string/github_AudioGod"
+            sshd:emailDev="audiogod.adi@gmail.com"/>
+			
+		<com.android.settings.widgets.DeveloperPreference
+            android:title="Anish"
+            sshd:nameDev="Anish"
+            sshd:twitterHandle="Anish Kumar"
+            sshd:donateLink="@string/github_anishsk"
+            sshd:emailDev="anish114@gmail.com"/>	
+		
+		<com.android.settings.widgets.DeveloperPreference
+            android:title="Adarsh MR"
+            sshd:nameDev="Adarsh MR"
+            sshd:twitterHandle="Adarsh M.R"
+            sshd:donateLink="@string/github_adarsh_mr"
+            sshd:emailDev="adarshmr1998@gmail.com"/>		
+    
+    </PreferenceCategory>
+	
+	<PreferenceCategory
+		android:key="maintainer_categorie"
+		android:title="@string/maintainer_categorie_title">
+					
+ 	   <PreferenceScreen
+        android:key="maintainers"
+		android:icon="@drawable/contributors"
+        android:fragment="com.android.settings.sshdtuner.about.DeviceMaintainersFragment"
+        android:summary="@string/device_maintainers_title_summary"
+        android:title="@string/device_maintainers_title" />
+                 	
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+         android:key="sshd_other"
+         android:title="@string/sshd_misc"> 
+		
+	    <!-- Share SSHD -->
+        <Preference
+            android:key="share"
+			android:icon="@drawable/share"
+            android:title="@string/share_sshd_title" 
+			android:summary="@string/share_sshd_summary" />  
+    
+    </PreferenceCategory>
+	      
+</PreferenceScreen>

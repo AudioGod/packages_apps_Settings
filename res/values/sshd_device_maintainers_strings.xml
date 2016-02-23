@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The Sungsonic Co
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	
+	<string name="device_maintainers_title"><b>Devices and Maintainers</b></string>
+    <string name="device_maintainers_title_summary">List of Devices and their SSHD ROM maintainers</string>
+
+    <string name="device_category_samsung_title">SAMSUNG</string>
+    <string name="device_category_sony_title">SONY</string>
+    <string name="device_category_lg_title">LG</string>
+    <string name="device_category_htc_title">HTC</string>
+    <string name="device_category_motorola_title">MOTOROLA</string>
+    <string name="device_category_google_title">GOOGLE</string>
+    <string name="device_category_oneplus_title">ONEPLUS</string>
+    <string name="device_category_yureka_title">YU</string>
+    <string name="device_category_xiaomi_title">XIAOMI</string>
+    <string name="device_category_huawei_title">Huawei</string>	
+    <string name="device_category_asus_title">Asus</string>
+	
+	<string name="maintainers_note_title">Note</string>
+    <string name="maintainers_note_title_summary">Send a PM to \'Adarsh M.R\' at Hangouts containing the link to your ROM thread if you want your name to be added in Device Maintainers list.</string>
+	
+	<string name="device_armani">Xiaomi Redmi 1S </string>
+    <string name="device_armani_summary">Armani\nMaintainer - Tarun</string>
+	
+	<string name="device_titan">Moto G 2014</string>
+    <string name="device_titan_summary">Titan \nMaintainer - Neohack</string>
+	
+	<string name="device_condor">Moto E </string>
+    <string name="device_condor_summary">Condor \nMaintainer - StarkDroid</string>
+	
+	<string name="device_trltexx">Galaxy Note 4 int Snapdragon</string>
+    <string name="device_trltexx_summary">N910F \nMaintainer - AudioGod</string>
+	
+</resources>

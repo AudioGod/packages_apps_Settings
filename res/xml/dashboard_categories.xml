@@ -72,6 +72,21 @@
 
     </dashboard-category>
 
+	<!-- SSHD CUSTOMIZATION -->
+    <dashboard-category
+            android:id="@+id/sshd_custom_section"
+            android:title="@string/header_category_sshd_custom" >
+		
+		<!-- SSHD Tuner -->
+       <dashboard-tile
+            android:id="@+id/sshd_tuner"
+            android:title="@string/sshd_tuner_title"
+            android:fragment="com.android.settings.sshdtuner.SSHDTuner"
+            android:icon="@drawable/ic_sshd_tuner"
+            />
+		
+    </dashboard-category>
+	
     <!-- DEVICE -->
     <dashboard-category
             android:id="@+id/device_section"
