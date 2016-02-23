@@ -6,6 +6,8 @@
 
     <uses-sdk
         android:minSdkVersion="21" />
+	
+	<uses-library android:name="org.apache.http.legacy" android:required="false" />
 
     <original-package android:name="com.android.settings" />
 
@@ -2584,6 +2586,23 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.applications.WriteSettingsDetails" />
         </activity>
+		
+		<!-- SSHD Tuner -->
+      	<activity android:name="Settings$SSHDTunerActivity"
+                android:label="@string/sshd_tuner_title"
+				android:icon="@drawable/app_icon"
+                android:taskAffinity="">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>
+          <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                     android:value="com.android.settings.sshdtuner.SSHDTuner" />
+          <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                     android:resource="@id/sshd_tuner" />
+      	</activity>
+		
+		<activity android:name=".sshdtuner.about.About" />
 
     </application>
 </manifest>

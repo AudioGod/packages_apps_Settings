@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015 The SSHD Project
+     Copyright (C) 2016 The Sungsonic Co
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -27,11 +27,54 @@
 	<!-- SuperSU -->
     <string name="supersu_title">SuperSU</string>
 	
-	<!-- Customization -->
-    <string name="header_category_custom">Customization</string>
+	<!-- SSHD Customization -->
+    <string name="header_category_sshd_custom">SSHD Customization</string>
 	<string name="themes_settings_title">Themes</string>
 	
-    <!-- General strings -->
+	<!-- SSHD Tuner Starts -->
+    <string name="sshd_tuner_title">SSHD Tuner</string>
+	<string name="nothing_title">Nothing to see here yet, move along</string>
+	<string name="sshd_about_title">SUNGSONIC HD</string>
+	<string name="sshd_ui_title">Interface</string>
+    <string name="sshd_statusbar_title">Statusbar</string>
+	<string name="sshd_navigation_title">Navigation</string>
+	<string name="sshd_notifications_title">Notifications</string>
+	<string name="sshd_lockscreen_title">Lock Screen</string>
+	<string name="sshd_recents_title">Recents</string>
+	<string name="sshd_powermenu_title">Power Menu</string>
+	<string name="sshd_tunermain_title">SSHD Tuner</string>
+	<!-- SSHD Tuner Ends -->
+	
+	<!-- About SSHD -->
+	<string name="about_sshd"> ABOUT SUNGSONIC HD</string>
+	<string name="sshd_links"> SSHD Usefull Links </string>
+	<string name="sshd_official_web"> SSHD Official Web </string>
+	<string name="sshd_official_downloads">Official Downloads</string>
+	<string name="sshd_official_changelog">Changelog</string>
+	<string name="sshd_official_github">Source Code</string>
+	<string name="sshd_official_donate">Donate</string>
+	<string name="sshd_official_gplus">G+ Community</string>
+	<string name="dev">Developers</string>
+	<string name="maintainer_categorie_title">SSHD Device Maintainers.</string>
+	<string name="maintainer_categorie_title">SSHD Device Maintainers.</string>
+	<string name="github_AudioGod">https://github.com/AudioGod</string>
+	<string name="github_anishsk">https://github.com/anishsk</string>
+	<string name="github_adarsh_mr">https://github.com/adarsh-mr</string>
+	<string name="sshd_misc">Misc Info</string>
+	
+	<!-- Share SSHD -->
+    <string name="share_sshd_title">Share SUNGSONIC HD</string>
+    <string name="share_sshd_summary">Let people know you use SUNGSONIC HD</string>
+    <string name="share_message">Try SUNGSONIC HD! http://sungsonic.co/</string>
+    <string name="share_chooser_title">Share SUNGSONIC HD via..</string>
+	
+	<!-- SSHDTuner categories -->
+	<string name="status_bar_misc_title">Stausbar Misc</string>
+	<string name="notification_drawer_title">Notification Drawer</string>
+    <string name="status_clock_date_title">Clock-Date-Battery</string>
+	<string name="sshd_tuner_options_title">SSHD Tuner Options</string>
+	
+	<!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
     <string name="help">Help</string>

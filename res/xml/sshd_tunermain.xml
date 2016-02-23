@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2016 The Sungsonic Co
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/sshd_tunermain_title" >
+	
+  	<!--Tuner Logo -->
+	<PreferenceScreen
+	      android:key="hdtuner"
+          android:enabled="true"
+          android:layout="@layout/hdtuner_logo" />	
+  
+  <PreferenceCategory
+      android:key="sshdtunermain"
+      android:title="@string/sshd_tuner_options_title">
+	  
+	    <!-- User interface -->
+        <PreferenceScreen
+            android:key="ui"
+            android:fragment="com.android.settings.sshdtuner.ui.Ui"
+            android:title="@string/sshd_ui_title"
+	        android:enabled="true" />
+	
+        <!-- Status Bar -->
+	    <PreferenceScreen
+            android:key="status_bar"
+            android:fragment="com.android.settings.sshdtuner.statusbar.Statusbar"
+            android:title="@string/sshd_statusbar_title"
+		    android:enabled="true" />   
+	    
+        <!-- Notifications -->
+        <PreferenceScreen
+    	    android:key="notifications"
+            android:fragment="com.android.settings.sshdtuner.notifications.Notifications"
+            android:title="@string/sshd_notifications_title"
+	        android:enabled="true" />
+	
+	    <!-- Navigation Bar -->
+        <PreferenceScreen
+    	    android:key="navibar"
+            android:fragment="com.android.settings.sshdtuner.navigation.Navigation"
+            android:title="@string/sshd_navigation_title"
+	        android:enabled="true" />
+	
+	    <!-- Lockscreen -->	
+        <PreferenceScreen
+    	    android:key="lockscreen"
+            android:fragment="com.android.settings.sshdtuner.lockscreen.Lockscreen"
+            android:title="@string/sshd_lockscreen_title"
+	        android:enabled="true" />
+	
+	    <!-- Recents -->
+	    <PreferenceScreen
+            android:key="recents"
+            android:fragment="com.android.settings.sshdtuner.recents.Recents"
+            android:title="@string/sshd_recents_title"
+            android:enabled="true" />
+	
+	    <!-- Power Menu -->
+	    <PreferenceScreen
+            android:key="powermenu"
+            android:fragment="com.android.settings.sshdtuner.powermenu.Powermenu"
+            android:title="@string/sshd_powermenu_title"
+		    android:enabled="true" />
+	  
+  </PreferenceCategory>
+</PreferenceScreen>

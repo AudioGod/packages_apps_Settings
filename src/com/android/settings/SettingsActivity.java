@@ -82,6 +82,7 @@ import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
+import com.android.settings.sshdtuner.SSHDTuner;
 import com.android.settings.dashboard.NoHomeDialogFragment;
 import com.android.settings.dashboard.SearchResultsSummary;
 import com.android.settings.deviceinfo.PrivateVolumeForget;
@@ -278,6 +279,8 @@ public class SettingsActivity extends Activity
             R.id.print_settings,
             R.id.nfc_payment_settings,
             R.id.home_settings,
+			R.id.sshd_custom_section,
+			R.id.sshd_tuner,
             R.id.dashboard
     };
 
@@ -354,6 +357,7 @@ public class SettingsActivity extends Activity
             ProcessStatsSummary.class.getName(),
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
+			SSHDTuner.class.getName()
     };
 
 

@@ -118,4 +118,6 @@ public class Settings extends SettingsActivity {
     public static class WriteSettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppDrawOverlaySettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppWriteSettingsActivity extends SettingsActivity { /* empty */ }
+	public static class SSHDTunerActivity extends SettingsActivity { /* empty */ }
+	public static class About extends SettingsActivity { /* empty */ }
 }
