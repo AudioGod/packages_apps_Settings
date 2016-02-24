@@ -29,7 +29,7 @@
 	
 	<!-- SSHD Customization -->
     <string name="header_category_sshd_custom">SSHD Customization</string>
-	<string name="themes_settings_title">Themes</string>
+	<string name="bitsyko_layers">Layers Manager</string>
 	
 	<!-- SSHD Tuner Starts -->
     <string name="sshd_tuner_title">SSHD Tuner</string>
