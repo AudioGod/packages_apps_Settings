@@ -267,37 +267,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         } else if (prefKey.equals(KEY_KERNEL_VERSION)) {
             setStringSummary(KEY_KERNEL_VERSION, getKernelVersion());
             return true;
-        } else if(preference.getKey().equals(KEY_SYSTEM_UPDATE_SETTINGS)) {
-            CarrierConfigManager configManager =
-                    (CarrierConfigManager) getSystemService(Context.CARRIER_CONFIG_SERVICE);
-            PersistableBundle b = configManager.getConfig();
-            if (b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
-                ciActionOnSysUpdate(b);
-            }
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
-    }
-
-    /**
-     * Trigger client initiated action (send intent) on system update
-     */
-    private void ciActionOnSysUpdate(PersistableBundle b) {
-        String intentStr = b.getString(CarrierConfigManager.
-                KEY_CI_ACTION_ON_SYS_UPDATE_INTENT_STRING);
-        if (!TextUtils.isEmpty(intentStr)) {
-            String extra = b.getString(CarrierConfigManager.
-                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING);
-            String extraVal = b.getString(CarrierConfigManager.
-                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING);
-
-            Intent intent = new Intent(intentStr);
-            if (!TextUtils.isEmpty(extra)) {
-                intent.putExtra(extra, extraVal);
-            }
-            Log.d(LOG_TAG, "ciActionOnSysUpdate: broadcasting intent " + intentStr +
-                    " with extra " + extra + ", " + extraVal);
-            getActivity().getApplicationContext().sendBroadcast(intent);
-        }
     }
 
     private void removePreferenceIfPropertyMissing(PreferenceGroup preferenceGroup,
