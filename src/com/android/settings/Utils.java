@@ -1320,7 +1320,6 @@ public final class Utils {
     public static boolean isPackageInstalled(Context context, String pkg) {
         return isPackageInstalled(context, pkg, true);
     }
-}
 
     public static String getServiceStateString(int state, Resources res) {
         switch (state) {
