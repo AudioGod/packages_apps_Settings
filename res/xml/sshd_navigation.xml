@@ -20,7 +20,20 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/sshd_navigation_title" >
 	
-	    <com.android.settings.preference.SecureSettingSwitchPreference
+	<PreferenceCategory
+        android:key="category_navbar_interface"
+        android:title="@string/navbarbar_title" >
+
+        <PreferenceScreen
+                android:key="navigation"
+                android:title="@string/navigation_category"
+                android:fragment="com.android.settings.solo.NavbarSettings"
+                android:summary="@string/navbar_summary"/>
+        
+    </PreferenceCategory>
+		
+		
+		<com.android.settings.preference.SecureSettingSwitchPreference
                 android:key="kill_app_longpress_back"
                 android:title="@string/kill_app_longpress_back"
                 android:summary="@string/kill_app_longpress_back_summary"

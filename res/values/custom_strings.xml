@@ -24,7 +24,7 @@
     <string name="reset_android">Android</string>
     <string name="link_volume_option_title">Link ringtone &amp; notification volumes</string>
 
-    <!-- Battery-->
+	<!-- Battery-->
     <string name="status_bar_battery_percentage_title">Show battery percentage</string>
     <string name="status_bar_battery_percentage_default">Hidden</string>
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
@@ -834,6 +834,8 @@
 
         <!-- Navigation Bar -->
     <string name="navigation_category">Navigation Bar</string>
+    <string name="navbarbar_title">System navigation</string>
+    <string name="navbar_summary">Navigation bar options (fling,pulse,height,width etc.)</string>
     <string name="navbar_interface_title">Interface</string>
     <string name="navbar_size">Bar size</string>
     <string name="navbar_mode">Navigation mode</string>
@@ -949,7 +951,7 @@
     <string name="fling_pulse_color">Pulse color</string>
     <string name="eos_fling_lavalamp_title">Turn on Lava Lamp</string>
     <string name="eos_fling_lavalamp_summary">Pulse animates a smooth lava lamp style color blend</string>
-
+	
     <!-- Blacklist preferences -->
     <string name="app_security_title">Privacy</string>
     <string name="blacklist_title">Blocked caller list</string>
