@@ -20,9 +20,17 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/sshd_navigation_title" >
 	
-	<Preference
-        android:key="nothing"
-        android:title="@string/nothing_title"
-        android:enabled="false" />
+	<PreferenceCategory
+        android:key="navigation_bar"
+        android:title="@string/navigation_bar_category" >
+
+        <!-- Double Tap Navbar to Sleep -->
+		<com.android.settings.sshd.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_navbar"
+            android:title="@string/double_tap_sleep_nav_bar_title"
+            android:summary="@string/double_tap_sleep_nav_bar_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
