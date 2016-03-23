@@ -46,7 +46,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.cyanogenmod.PackageListAdapter;
 import com.android.settings.cyanogenmod.PackageListAdapter.PackageItem;
-import com.android.settings.cyanogenmod.SystemSettingSwitchPreference;
+import com.android.settings.sshd.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -158,7 +158,7 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
 
 	@Override
     protected int getMetricsCategory() {
-        return MetricsLogger.DONT_TRACK_ME_BRO;
+        return MetricsLogger.SSHDTUNER;
     }
 
     @Override
