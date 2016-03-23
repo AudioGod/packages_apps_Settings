@@ -259,7 +259,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         if (preference == mVolumeControlRingStream) {
             int value = mVolumeControlRingStream.isChecked() ? 1 : 0;
             Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.VOLUME_KEYS_CONTROL_RING_STREAM, newValue);
+                    Settings.System.VOLUME_KEYS_CONTROL_RING_STREAM, value);
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
