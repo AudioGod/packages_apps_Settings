@@ -26,6 +26,13 @@
         android:title="@string/status_bar_toggle_brightness"
         android:summary="@string/status_bar_toggle_brightness_summary"
         android:defaultValue="false" />
+		
+	<!-- Status bar double tap to sleep gesture -->
+	<com.android.settings.sshd.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_gesture"
+        android:title="@string/double_tap_to_sleep_title"
+        android:summary="@string/double_tap_to_sleep_summary"
+        android:defaultValue="true" />	
 	
 	<!-- Network traffic -->
     <PreferenceScreen
