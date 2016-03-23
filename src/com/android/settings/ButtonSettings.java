@@ -30,6 +30,7 @@ import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 
 import android.util.Log;
@@ -54,6 +55,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_MENU_PRESS = "hardware_keys_menu_press";
     private static final String KEY_MENU_LONG_PRESS = "hardware_keys_menu_long_press";
 	private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+	private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
 
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_HOME = "home_key";
@@ -92,6 +94,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private ListPreference mMenuPressAction;
     private ListPreference mMenuLongPressAction;
 	private ListPreference mVolumeKeyCursorControl;
+	
+	private SwitchPreference mVolumeRockerWake;
 
     private PreferenceCategory mNavigationPreferencesCat;
 
@@ -182,6 +186,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         if (!backlight.isButtonSupported()) {
             prefScreen.removePreference(backlight);
         }
+		mVolumeRockerWake = (SwitchPreference) findPreference(VOLUME_ROCKER_WAKE);
+        mVolumeRockerWake.setOnPreferenceChangeListener(this);
+        int volumeRockerWake = Settings.System.getInt(getContentResolver(),
+                VOLUME_ROCKER_WAKE, 0);
+        mVolumeRockerWake.setChecked(volumeRockerWake != 0);
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -227,7 +236,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             handleActionListChange(mVolumeKeyCursorControl, newValue,
                     Settings.System.VOLUME_KEY_CURSOR_CONTROL);
             return true;
-		}
+		} else if (preference == mVolumeRockerWake) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(), VOLUME_ROCKER_WAKE,
+                    value ? 1 : 0);
+        }
         return false;
     }
 
