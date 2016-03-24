@@ -20,6 +20,14 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/sshd_notifications_title" >
 	
+	<PreferenceScreen
+                android:title="@string/quick_settings_title"
+                android:summary="@string/quick_settings_summary" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.systemui"
+                    android:targetClass="com.android.systemui.tuner.QsActivity" />
+    </PreferenceScreen>
+	
 	<com.android.settings.sshd.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
         android:title="@string/notification_force_expand_title"

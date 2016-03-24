@@ -39,7 +39,16 @@
             android:key="show_headset_icon"
             android:title="@string/show_headset_icon_title"
             android:summary="@string/show_headset_icon_summary"
-            android:defaultValue="true" />	
+            android:defaultValue="true" />
+			
+	<!-- Status Bar items -->
+	<PreferenceScreen
+            android:title="@string/status_bar_icon_blacklist_title"
+            android:summary="@string/status_bar_icon_blacklist_summary" >
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.TunerActivity" />
+    </PreferenceScreen>		
 	
 	<!-- Clock & Date  -->
 	<PreferenceScreen
