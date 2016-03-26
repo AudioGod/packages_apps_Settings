@@ -587,5 +587,9 @@
 	<!-- Scramble PIN -->
 	<string name="unlock_scramble_pin_layout_title">Scramble layout</string>
     <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
+	
+	<!-- Left handed nav bar -->
+	<string name="navigation_bar_left_title">Left-handed mode</string>
+    <string name="navigation_bar_left_summary">Place the navigation bar on the left side of the screen in landscape mode</string
 
 </resources>
