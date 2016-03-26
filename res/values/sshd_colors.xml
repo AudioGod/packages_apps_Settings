@@ -33,5 +33,9 @@
     <color name="theme_accent">#ff009688</color>
     <color name="screencolor_background">#50000000</color>
     <drawable name="transparent_background">#00000000</drawable>
+	
+	<!-- DSLV colors -->
+    <color name="dslv_icon_dark">#ff009688</color>
+    <color name="dslv_float_cackground_color">#ffe1e1e0</color>
 
 </resources>
