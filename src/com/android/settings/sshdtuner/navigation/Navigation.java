@@ -51,7 +51,7 @@ import java.util.List;
 
 import com.android.internal.logging.MetricsLogger;
 
-public class Navbar extends SettingsPreferenceFragment implements
+public class Navigation extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 	
     private static final String DIM_NAV_BUTTONS = "dim_nav_buttons";

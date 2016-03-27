@@ -16,18 +16,43 @@
 
 package com.android.settings.sshdtuner.lockscreen;
 
+import android.provider.SearchIndexableResource;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
 import android.app.Activity;
 import android.app.WallpaperManager;
 import android.content.Intent;
 import android.net.Uri;
+import android.app.ActivityManager;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.SystemProperties;
+import android.provider.Settings;
+import android.preference.ListPreference;
+import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.PreferenceCategory;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.SlimSeekBarPreference;
+import android.preference.SwitchPreference;
+import android.text.TextUtils;
+import android.widget.Toast;
+
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.util.slim.Action;
 
 import com.android.internal.logging.MetricsLogger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Lockscreen extends SettingsPreferenceFragment {
 
