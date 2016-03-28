@@ -75,6 +75,18 @@
 	<string name="sshd_volume_cat">Volume Buttons</string>
 	<string name="sshd_powermenu_cat">PowerMenu Customization</string>
 	<string name="sshd_statusbar_cat">StatusBar Customizations</string>
+	<string name="sshd_battery_cat">Battery</string>
+	<string name="sshd_battery_title">Battery </string>
+	<string name="battery2_summary">Customize battery icons and percentage</string>
+	<string name="statusbar_bar_title">Statusbar options</string>
+    <string name="statusbar_bar_summary">Adjust items like battery,clock,icons,and colors</string>
+    <string name="clock_category">Clock And Date</string>
+	<string name="clock_styles_summary">Customize clock styles and date format</string>
+    <string name="battery_category">Battery</string>
+    <string name="icon_category">Icons</string>
+    <string name="carrier_category">Carrier label</string>
+    <string name="traffic_category">Network traffic</string>
+    <string name="extra_category">Extras</string>
 	
 	<!-- General strings -->
     <string name="ok">OK</string>
@@ -91,11 +103,16 @@
     <string name="choose_app">Choose App</string>
     <string name="reset_message">Reset all entries to default?</string>
     <string name="reset_android">Android</string>
-    <string name="reset_screwd">Screw\'d</string>
+	<string name="dlg_reset_aosip">SSHD</string>
     <string name="positive_done">Done</string>
-    <string name="dlg_reset_values_message">Reset values to default?</string>
+    <string name="dlg_reset_values_message">Reset values to\nAndroid- or SSHD default?</string>
+	<string name="dlg_reset_colors_message">Reset colors to\nAndroid- or SSHD default?</string>
     <string name="dlg_reset_android">Ok</string>
+	<string name="normal_title">Normal</string>
     <string name="hidden_title">Hidden</string>
+    <string name="position_title">Position</string>
+    <string name="position_right_title">Right</string>
+    <string name="position_centered_title">Centered</string>
     <string name="customize_title">Customize</string>
     <string name="ripple_title">Ripple effect</string>
     <string name="colorize_ripple_title">Colorize ripple effect</string>

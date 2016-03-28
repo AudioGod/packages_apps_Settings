@@ -18,12 +18,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/sshd_notifications_title" >
-	
-	<Preference
-        android:key="nothing"
-        android:title="@string/nothing_title"
-        android:enabled="false" />
+    android:title="@string/clock_category" >
 
     <ListPreference
         android:key="clock_date_position"

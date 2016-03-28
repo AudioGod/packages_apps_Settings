@@ -53,7 +53,7 @@ public class BatteryCategory extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.sshd_statusbar);
+        addPreferencesFromResource(R.xml.sshd_battery);
 
         ContentResolver resolver = getActivity().getContentResolver();
 
