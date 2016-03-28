@@ -34,7 +34,13 @@
                 android:key="recents_full_screen"
                 android:title="@string/recents_show_fullscreen"
                 android:summary="@string/recents_fullscreen_summary"
-                android:defaultValue="false" />		
+                android:defaultValue="false" />
+  		
+ 	    <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="systemui_recents_mem_display"
+                android:title="@string/recents_show_membar_title"
+                android:summary="@string/recents_show_membar_summary"
+                android:defaultValue="true" />
 
         <SwitchPreference
                 android:key="show_clear_all_recents"
