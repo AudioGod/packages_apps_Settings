@@ -35,7 +35,7 @@
 	<string name="sshd_ui_title">Interface</string>
     <string name="sshd_statusbar_title">Statusbar</string>
 	<string name="sshd_navigation_title">Navigation</string>
-	<string name="sshd_notifications_title">Notifications</string>
+	<string name="sshd_notifications_title">Quick Setting &amp; Notification</string>
 	<string name="sshd_lockscreen_title">Lock Screen</string>
 	<string name="sshd_recents_title">Recents</string>
 	<string name="sshd_volume_title">Volume Buttons</string>

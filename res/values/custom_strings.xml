@@ -67,7 +67,7 @@
     <string name="carrier_label_use_custom_title">Custom carrier label</string>
     <string name="carrier_label_use_custom_summary">Enable to use a custom carrier label</string>
     <string name="carrier_label_custom_label_title">Custom label</string>
-    <string name="carrier_label_custom_label_dlg_message">Enter a new custom label to display instead of the real carrier name. An empty field will revert the name to \'AOSiP\'</string>
+    <string name="carrier_label_custom_label_dlg_message">Enter a new custom label to display instead of the real carrier name. An empty field will revert the name to \'SSHD\'</string>
     <string name="carrier_label_hide_label_title">Hide</string>
     <string name="carrier_label_hide_label_summary">Enable to choose a number of visible notification icons to hide the (custom) carrier label on the status bar</string>
     <string name="carrier_label_number_of_notification_icons_title">Number of notification icons</string>
@@ -108,6 +108,25 @@
     <string name="tile_category">Quick Settings</string>
     <string name="quick_settings_title">Tiles</string>
     <string name="quick_settings_summary">Add or remove tiles</string>
+	<!-- QuickSettings 4 columns -->
+    <string name="qs_four_columns_title">Show four tiles per row</string>
+    <string name="qs_four_columns_summary">Change default tile count from 3 to 4 columns</string>
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+    <!-- QuickSettings main tiles -->
+    <string name="qs_main_tiles_title">Enlarge first row</string>
+    <string name="qs_main_tiles_summary_on">Two main tiles on the first row</string>
+    <string name="qs_main_tiles_summary_off">Three or four tiles on each row</string>
+    <!-- QuickSettings brightness slider -->
+    <string name="qs_brightness_slider_title">Brightness slider</string>
+    <string name="qs_brightness_slider_summary">Show a brightness slider in the quick settings panel</string>
+	<!-- Status bar quick qs pulldown -->
+    <string name="title_quick_pulldown">Quick pulldown</string>
+    <string name="summary_quick_pulldown">%1$s edge of the status bar pulls down Quick Settings</string>
+    <string name="quick_pulldown_off">Off</string>
+    <string name="quick_pulldown_left">Left</string>
+    <string name="quick_pulldown_right">Right</string>
 
 	<!--- Volume keys cursor control -->
     <string name="ras_volume_keys_cursor_control_title">Cursor control</string>
