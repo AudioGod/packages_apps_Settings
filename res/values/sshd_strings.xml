@@ -87,6 +87,7 @@
     <string name="carrier_category">Carrier label</string>
     <string name="traffic_category">Network traffic</string>
     <string name="extra_category">Extras</string>
+	<string name="stock_recents_title">AOSP Recents</string>
 	
 	<!-- General strings -->
     <string name="ok">OK</string>
