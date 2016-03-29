@@ -744,5 +744,13 @@
     <string name="link_volume_option_title">Link ring and notification volume</string>
     <string name="notification_volume_option_title">Notification volume</string>
     <string name="ring_notification_volume_option_title">Ring and notification volume</string>
-
+	
+	<!-- QS shade transparency -->
+    <string name="qs_transparent_shade">QS shade transparency</string>
+    <!-- QS header transparency -->
+    <string name="qs_transparent_header">QS header transparency</string>
+    <!-- Power menu and dialogs transparency -->
+    <string name="power_menu_transparency">Power/reboot menu transparency</string>
+	<!-- Volume dialog transparency -->
+    <string name="volume_dialog_transparency">Volume dialog transparency</string>
 </resources>

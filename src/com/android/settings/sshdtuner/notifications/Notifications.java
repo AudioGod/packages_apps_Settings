@@ -41,6 +41,7 @@ import java.util.regex.Pattern;
 import java.util.Locale;
 import android.text.TextUtils;
 import android.view.View;
+import com.android.settings.sshdtuner.seekbar.SeekBarPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -51,9 +52,13 @@ public class Notifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "StatusBar";
     private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
+	private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
+	private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
 
     private ListPreference mQuickPulldown;
-
+	private SeekBarPreference mQSHeaderAlpha; 
+    private SeekBarPreference mQSShadeAlpha;
+	
     private final Configuration mCurConfig = new Configuration();
 
     @Override
@@ -72,6 +77,22 @@ public class Notifications extends SettingsPreferenceFragment implements
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 1);
         mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
         updateQuickPulldownSummary(statusQuickPulldown);
+		
+		// QS header alpha
+        mQSHeaderAlpha =
+                (SeekBarPreference) prefSet.findPreference(PREF_QS_TRANSPARENT_HEADER);
+        int qSHeaderAlpha = Settings.System.getInt(resolver,
+                Settings.System.QS_TRANSPARENT_HEADER, 255);
+        mQSHeaderAlpha.setValue(qSHeaderAlpha / 1);
+        mQSHeaderAlpha.setOnPreferenceChangeListener(this);
+		
+		// QS shade alpha
+        mQSShadeAlpha =
+                (SeekBarPreference) prefSet.findPreference(PREF_QS_TRANSPARENT_SHADE);
+        int qSShadeAlpha = Settings.System.getInt(resolver,
+                Settings.System.QS_TRANSPARENT_SHADE, 255);
+        mQSShadeAlpha.setValue(qSShadeAlpha / 1);
+        mQSShadeAlpha.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -94,15 +115,25 @@ public class Notifications extends SettingsPreferenceFragment implements
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         final String key = preference.getKey();
         if (preference == mQuickPulldown) {
-            int statusQuickPulldown = Integer.valueOf((String) objValue);
+            int statusQuickPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     statusQuickPulldown);
             updateQuickPulldownSummary(statusQuickPulldown);
             return true;
+		} else if (preference == mQSHeaderAlpha) {
+            int alpha = (Integer) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.QS_TRANSPARENT_HEADER, alpha * 1);
+            return true;
+        } else if (preference == mQSShadeAlpha) {
+            int alpha = (Integer) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.QS_TRANSPARENT_SHADE, alpha * 1);
+            return true;		
         }
          return false;
     }

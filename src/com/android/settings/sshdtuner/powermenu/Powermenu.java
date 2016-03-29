@@ -17,6 +17,7 @@
 package com.android.settings.sshdtuner.powermenu;
 
 import android.content.Context;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ import android.support.annotation.NonNull;
 
 import com.android.internal.util.cm.PowerMenuConstants;
 import static com.android.internal.util.cm.PowerMenuConstants.*;
+import com.android.settings.sshdtuner.seekbar.SeekBarPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -41,7 +43,10 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Powermenu extends PreferenceFragment {
+public class Powermenu extends PreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
+
+    private static final String PREF_TRANSPARENT_POWER_MENU = "transparent_power_menu";
 
     private SwitchPreference mRebootPref;
     private SwitchPreference mScreenshotPref;
@@ -58,6 +63,8 @@ public class Powermenu extends PreferenceFragment {
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
     private String[] mAvailableActions;
     private String[] mAllActions;
+	
+	private SeekBarPreference mPowerMenuAlpha;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,11 +72,22 @@ public class Powermenu extends PreferenceFragment {
 
         addPreferencesFromResource(R.xml.sshd_powermenu);
         mContext = getActivity().getApplicationContext();
+		PreferenceScreen prefSet = getPreferenceScreen();
+
+        ContentResolver resolver = getActivity().getContentResolver();
 
         mAvailableActions = getActivity().getResources().getStringArray(
                 R.array.power_menu_actions_array);
         mAllActions = PowerMenuConstants.getAllActions();
-
+        
+		// Power menu alpha
+        mPowerMenuAlpha =
+                (SeekBarPreference) prefSet.findPreference(PREF_TRANSPARENT_POWER_MENU);
+        int powerMenuAlpha = Settings.System.getInt(resolver,
+                Settings.System.TRANSPARENT_POWER_MENU, 100);
+        mPowerMenuAlpha.setValue(powerMenuAlpha / 1);
+        mPowerMenuAlpha.setOnPreferenceChangeListener(this);
+ 
         for (String action : mAllActions) {
             // Remove preferences not present in the overlay
             if (!isActionAllowed(action)) {
@@ -304,5 +322,17 @@ public class Powermenu extends PreferenceFragment {
         Intent u = new Intent();
         u.setAction(Intent.UPDATE_POWER_MENU);
         mContext.sendBroadcastAsUser(u, UserHandle.ALL);
+    }
+	
+	@Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        int alpha = (Integer) newValue;
+        if (preference == mPowerMenuAlpha) {
+                Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.TRANSPARENT_POWER_MENU, alpha * 1);
+            return true;
+        }
+        return false;
     }
 }
