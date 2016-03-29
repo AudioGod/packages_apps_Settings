@@ -88,6 +88,9 @@
     <string name="traffic_category">Network traffic</string>
     <string name="extra_category">Extras</string>
 	<string name="stock_recents_title">AOSP Recents</string>
+	<string name="sshd_icons_title">Statusbar Icons</string>
+	<string name="statusbar_icons_category">Statusbar Icons Customization</string>
+	<string name="statusbar_icons_summary">Add remove change color of status bar icons</string>
 	
 	<!-- General strings -->
     <string name="ok">OK</string>
