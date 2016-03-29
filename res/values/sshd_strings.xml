@@ -118,5 +118,10 @@
     <string name="ripple_title">Ripple effect</string>
     <string name="colorize_ripple_title">Colorize ripple effect</string>
     <string name="colorize_ripple_dialog_title">Choose how to colorize the ripple effect</string>
-	
+	<string name="profiles_add">Add</string>
+    <string name="profile_choose_app">Choose app</string>
+    <string name="profile_reset_title">Reset</string>
+    <string name="add">Add</string>
+    <string name="choose_app">Choose app</string>
+ 
 </resources>

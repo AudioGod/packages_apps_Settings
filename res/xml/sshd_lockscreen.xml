@@ -24,12 +24,37 @@
         android:key="lockscreen_weather"
         android:title="@string/weather_category">
 	
-	    <!-- Clock & Date  -->
+	    <!-- Lockscreen Weather  -->
 	    <PreferenceScreen
             android:key="ls_weather"
             android:title="@string/weather_category"
             android:summary="@string/lockscreen_summary"
             android:fragment="com.android.settings.sshdtuner.lockscreen.WeatherCategory" />
+			
+    </PreferenceCategory>
+	
+	<PreferenceCategory
+        android:key="lockscreen_shortcuts"
+        android:title="@string/shortcut_category">
+		
+		<PreferenceScreen
+                 android:key="lockscreen_shortcuts"
+                 android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
+                 android:summary="@string/lockscreen_shortcuts_summary"
+                 android:title="@string/lockscreen_shortcuts_title">
+             <extra android:name="actionMode" android:value="4" />
+             <extra android:name="maxAllowedActions" android:value="5" />
+             <extra android:name="disableLongpress" android:value="true" />
+             <extra android:name="useAppPickerOnly" android:value="true" />
+             <extra android:name="fragment" android:value="com.android.settings.slim.fragments.LockscreenShortcutFragment" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:title="@string/lockscreen_targets_message" 
+            android:summary="@string/lockscreen_corner_summary">
+            <intent
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.cm.LockscreenShortcutsActivity" />
 			
     </PreferenceCategory>
 </PreferenceScreen>
