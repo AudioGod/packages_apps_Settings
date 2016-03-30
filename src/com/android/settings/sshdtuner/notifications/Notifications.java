@@ -31,7 +31,6 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
-import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.WindowManagerGlobal;
@@ -55,12 +54,10 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
 	private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
 	private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
-	private static final String PREF_CUSTOM_HEADER_DEFAULT = "status_bar_custom_header_default";
 
     private ListPreference mQuickPulldown;
 	private SeekBarPreference mQSHeaderAlpha; 
     private SeekBarPreference mQSShadeAlpha;
-	private SwitchPreference mCustomHeader; 
 	
     private final Configuration mCurConfig = new Configuration();
 
@@ -96,12 +93,6 @@ public class Notifications extends SettingsPreferenceFragment implements
                 Settings.System.QS_TRANSPARENT_SHADE, 255);
         mQSShadeAlpha.setValue(qSShadeAlpha / 1);
         mQSShadeAlpha.setOnPreferenceChangeListener(this);
-		
-		// Status bar custom header hd
-        mCustomHeader = (SwitchPreference) findPreference(PREF_CUSTOM_HEADER_DEFAULT);
-        mCustomHeader.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT, 0) == 1));
-        mCustomHeader.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -126,7 +117,6 @@ public class Notifications extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final String key = preference.getKey();
-		ContentResolver resolver = getContentResolver();
         if (preference == mQuickPulldown) {
             int statusQuickPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(),
@@ -143,11 +133,6 @@ public class Notifications extends SettingsPreferenceFragment implements
             int alpha = (Integer) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
             Settings.System.QS_TRANSPARENT_SHADE, alpha * 1);
-            return true;
-        } else if (preference == mCustomHeader) {
-           boolean value = (Boolean) newValue;
-           Settings.System.putInt(resolver,
-                   Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT, value ? 1 : 0);
             return true;		
         }
          return false;
